@@ -1,0 +1,293 @@
+//import file
+
+@import 'component/navbar';
+
+// mixin
+@mixin border-r-b {
+  border: 1px solid #dddfe2;
+  border-radius: 3px;
+}
+
+body {
+  background-color: #e9ebee;
+  height: 3000px;
+}
+
+// start page contant
+
+.full-page {
+    .en {
+      width: 200px
+    }
+    .frist-head-img {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+    .sconed-head-img {
+      color: #939095;
+      font-size: 14px;
+    }
+    .links li {
+      padding: 4px 0 4px 5px;
+      &:hover {
+        background-color: #FFF;
+      }
+    }
+    .links li a {
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      font-weight: 500;
+    }
+
+
+    // start header
+    header {
+      background-image: url(../imgs/Cover-Image.png);
+      background-size: cover;
+      width: 100%;
+      height: 50vh;
+    }
+    // end header
+    // start bar
+    .like-bar {
+      width: 100%;
+      padding: 10px 10px;
+      background-color: #FFF;
+      .btn {
+        background-color: #e9ebee;
+        color: #665a5a;
+        font-weight: 500;
+        text-transform: capitalize;
+        border-radius: 0;
+        border-color: #ccc;
+      }
+      .right-btns {
+        display: inline-block;
+        float: right;
+        .learn {
+          background-color: #4468b0;
+          color: #fff;
+        }
+      }
+    }
+    // end bar
+    .status-bar {
+      @include border-r-b;
+      padding: 8px;
+      margin-top: 20px;
+      background-color: #fff;
+      span {
+        font-weight: 500;
+        margin-left: 5px;
+        text-transform: capitalize;
+      }
+      img {
+        width: 25px;
+      }
+    }
+    .write-bar {
+      position: relative;
+      margin-top: 20px;
+      textarea {
+        @include border-r-b;
+        width: 100%;
+        padding: 10px 0 0 58px;
+      }
+      .img-write {
+        position: absolute;
+        width: 40px;
+        top: 10px;
+        left: 10px;
+      }
+    }
+    .Posts{
+      padding: 10px 8px 8px;
+      background-color: #FFF;
+      @include border-r-b;
+      span {
+        font-weight: bold;
+      }
+      .post {
+        padding: 10px 8px 8px;
+        background-color: #fff;
+        @include border-r-b;
+        margin-top: 8px;
+        .img-profile {
+          width: 30px;
+        }
+        h6 {
+          display: inline-block;
+          color: #385997;
+          font-weight: bold;
+        }
+        span {
+          color: #60676f;
+          float: right;
+          cursor: pointer;
+        }
+        p {
+          font-weight: 500;
+        }
+        .post-img {
+          width: 100%;
+        }
+        .active-like {
+          @include border-r-b;
+          span {
+            padding: 10px;
+            text-transform: capitalize;
+            font-weight: 500;
+          }
+        }
+        .like-cuonter {
+          @include border-r-b;
+          padding: 10px 8px;
+          span {
+            float: none;
+            background-color: #4483fb;
+            color: #FFF;
+            border-radius: 50%;
+            font-size: 15px;
+            padding-left: 4px;
+          }
+          p {
+            color: #4483fb;
+            display: inline-block;
+            margin-left: 5px;
+            margin-bottom: 0;
+          }
+        }
+        .comment-bar {
+          @include border-r-b;
+          padding: 10px;
+          .comment-img {
+            width: 25px;
+          }
+          input {
+            width: 93%;
+            border-radius: 15px;
+            border: none;
+            border: 1px solid #dddfe2;
+            height: 35px;
+            padding-left: 10px;
+          }
+        }
+      }
+    }
+    .search {
+      position: absolute;
+      top: 29px;
+      left: 20px;
+      color: #c4c7cb;
+    }
+    .right {
+      margin: 20px 0;
+      width: 100%;
+      border: none;
+      height: 40px;
+      padding-left: 30px;
+    }
+    .community {
+      @include border-r-b;
+      padding: 10px;
+      background-color: #FFF;
+      h6 {
+        display: inline-block;
+      }
+      .see-all {
+        float: right;
+        a {text-decoration: none;}
+      }
+      div {
+        margin: 10px 0;
+        cursor: pointer;
+        .frie, .lik, .flow, .ad {
+          display: inline-block;
+          width: 10%;
+        }
+        p {
+          font-size: 14px;
+          display: inline;
+          width: 90%;
+        }
+      }
+
+    }
+    .about {
+      @include border-r-b;
+      background-color: #FFF;
+      margin: 5px 0;
+      padding: 10px;
+      h6 {
+        display: inline-block;
+      }
+      .see-all-about {
+        float: right;
+        a {text-decoration: none;}
+      }
+      div {
+        margin: 10px 0;
+        cursor: pointer;
+        span {
+          display: inline-block;
+          width: 10%;
+        }
+        p {
+          color: #4468b0;
+          font-size: 14px;
+          display: inline;
+          width: 90%;
+        }
+      }
+    }
+    .pepole {
+      @include border-r-b;
+      background-color: #FFF;
+      margin: 5px 0 0;
+      padding: 5px;
+      span {
+        cursor: pointer;
+      }
+    }
+    .likes {
+      @include border-r-b;
+      background-color: #FFF;
+      padding: 14px 0;
+      span:first-of-type {
+        font-weight: bold;
+        font-size: 20px;
+      }
+      span:last-of-type {
+        font-size: 14px;
+      }
+    }
+    .page-likes {
+      @include border-r-b;
+      background-color: #FFF;
+      padding: 10px;
+    }
+    .artists {
+      @include border-r-b;
+      background-color: #FFF;
+      padding: 10px;
+      overflow: hidden;
+      .artist-img {
+        width: 50px;
+
+      }
+      .dropdown {
+        margin-top: 5px;
+        .btn {
+          background-color: rgba(204, 204, 204, .5);
+          color: #665a5a;
+          border-radius: 0;
+          padding: 0 8px;
+          border-color: #ccc;
+          font-weight:500;
+        }
+      }
+    }
+}
+
+// end page contant
